@@ -17,19 +17,8 @@ function RouterApp() {
 
     return(
         <div>
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar variant="dense">
-                <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-                 <MenuIcon />
-                </IconButton>
-            <Typography variant="h6" color="inherit" component="div">
-            Personal trainer app
-            </Typography>
-            </Toolbar>
-            </AppBar>
-        </Box>
-            {/*<AppBar position='static'>
+        
+            <AppBar position='static'>
                 <Toolbar>
                     <Typography variant = 'h6'>
                     Personal trainer app
@@ -43,7 +32,7 @@ function RouterApp() {
                 <Route path='/customers' element={<CustomerList/>}/>
                 <Route path='/trainings' element={<TrainingsList/>}/>
             </Routes>  
-            </BrowserRouter>*/}
+            </BrowserRouter>
         </div>
     );
 }
