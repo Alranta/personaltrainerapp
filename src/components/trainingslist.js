@@ -18,19 +18,20 @@ function TrainingsList() {
         .then(data => setTrainings(data))
         .catch(err => console.error(err))
     }, [])
+    
 
-
-    const dayjs = require('dayjs')
-    //import dayjs from 'dayjs'
+    
     
     
 
     // MAKE COLUMNS FOR AGGRID
     const [columnDefs] = useState([
-        {field: 'date', sortable: true, filter: true},
+        {headerName: 'Date', field: 'date', sortable: true, filter: true,
+        valueFormatter: params => dayjs(params.value).format('DD/MM/YYYY HH:MM')},
         {field: 'duration', sortable: true, filter: true},
         {field: 'activity', sortable: true, filter: true},
-        {field: "customer.lastname", headerName: 'Customer name', sortable: true, filter: true}
+        {headerName: 'Firstname', field: "customer.firstname", sortable: true, filter: true},
+        {headerName: 'Lastname', field: "customer.lastname", sortable: true, filter: true}
         
     ]);
 
