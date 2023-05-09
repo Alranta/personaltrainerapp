@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import TabPanel from "./Tabs.js";
 
 function RouterApp() {
 
@@ -25,7 +26,9 @@ function RouterApp() {
                     </Typography>
                 </Toolbar>
             </AppBar>
+            
             <BrowserRouter>
+                
                 <Link to='/customers'>Customers</Link>{' '}
                 <Link to='/trainings'>Trainings</Link>{' '}
             <Routes>
